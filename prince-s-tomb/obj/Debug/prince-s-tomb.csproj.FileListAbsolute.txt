@@ -1,0 +1,7 @@
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\bin\Debug\prince-s-tomb.exe.config
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\bin\Debug\prince-s-tomb.exe
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\bin\Debug\prince-s-tomb.pdb
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\obj\Debug\prince-s-tomb.csprojAssemblyReference.cache
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\obj\Debug\prince-s-tomb.csproj.CoreCompileInputs.cache
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\obj\Debug\prince-s-tomb.exe
+D:\wwwroot\Kiss Edina\prince-s-tomb\prince-s-tomb\obj\Debug\prince-s-tomb.pdb
