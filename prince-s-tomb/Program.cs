@@ -13,12 +13,45 @@ namespace prince_s_tomb
 
             setWindowSettins();
             //menu
-            menu();
+            menu(true);
+            bool menuLoop = true;
+            bool menuOption = true;
+            while (menuLoop)
+            {
+                ConsoleKey cK = Console.ReadKey().Key;
+               
+                if (cK == ConsoleKey.DownArrow)
+                {
+                    menu(false);
+                    menuOption = false;
 
-            //mapgen();
+                }
+                else if (cK == ConsoleKey.UpArrow)
+                {
+                    menu(true);
+                    menuOption = true;
+
+                }
+                if (cK == ConsoleKey.Enter)
+                {
+                    if (menuOption)
+                    {
+                       
+                        mapgen();
+
+                    }
+                    else
+                    {
+                        Environment.Exit(0);
+                    }
+                }
+            }
             
             
-            
+
+
+
+
             //grafika
             //pathfinding
             //cilkus movement
@@ -27,20 +60,64 @@ namespace prince_s_tomb
 
         }
 
-        private static void menu()
+        private static void menu(bool option)
         {
-            Console.WriteLine("\n\n\n\n\n");
-            Console.WriteLine("");
-            Console.WriteLine("Start");
+            if (option)
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.SetCursorPosition(56, 12);
+                Console.WriteLine("____________");
+                Console.SetCursorPosition(55, 13);
+                Console.WriteLine("|  Start   |");
+                Console.SetCursorPosition(54, 14);
+                Console.WriteLine("____________");
+
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(56, 15);
+                Console.WriteLine("____________");
+                Console.SetCursorPosition(55, 16);
+                Console.WriteLine("|   Quit   |");
+                Console.SetCursorPosition(54, 17);
+                Console.WriteLine("____________");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(56, 12);
+                Console.WriteLine("____________");
+                Console.SetCursorPosition(55, 13);
+                Console.WriteLine("|  Start   |");
+                Console.SetCursorPosition(54, 14);
+                Console.WriteLine("____________");
+
+                Console.BackgroundColor = ConsoleColor.DarkGreen;
+                Console.SetCursorPosition(56, 15);
+                Console.WriteLine("____________");
+                Console.SetCursorPosition(55, 16);
+                Console.WriteLine("|   Quit   |");
+                Console.SetCursorPosition(54, 17);
+                Console.WriteLine("____________");
+                Console.BackgroundColor = ConsoleColor.Black;
+
+            }
+
         }
+
 
         private static void setWindowSettins()
         {
+            Console.CursorVisible = false;
             Console.SetWindowSize(120,30);
         }
 
         private static void mapgen()
         {
+            Console.Clear();
+
+
+
             Random r = new Random();
             int[,] map = new int[25, 25];
 
