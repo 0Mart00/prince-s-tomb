@@ -30,11 +30,9 @@ public class MenuClass
                 {
 
                     global::prince_s_tomb.Program.Start();
-                    Console.WriteLine("DEBUG: To load Menu");
                 }
                 else
                 {
-                    Console.WriteLine("DEBUG: Closed");
                     Environment.Exit(0);
                 }
             }

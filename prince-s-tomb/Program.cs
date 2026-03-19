@@ -25,7 +25,7 @@ namespace prince_s_tomb
                 {
                     temp += $" {pathedMap[i, j]}";
                 }
-                Console.WriteLine(temp);
+                //Console.WriteLine(temp);
                 temp = "";
             }
 
@@ -327,21 +327,21 @@ namespace prince_s_tomb
 
                 if (playerX == xEnd && playerY == yEnd)
                 {
-                    Console.WriteLine("anyádat te geci");
+                    Console.WriteLine("Megtaláltad a Sírt");
+                    gameEnd = false;
                 }
-                Console.WriteLine($"X: {playerX} Y: {playerY} ? {xEnd} and {yEnd}");
             }
         }
 
         public static int[,] PathFinding(int[,] map)
         {
             Random random = new Random();
-            int x = 1, y = 1;
+            int x = 3, y = 3;
 
             for (int j = 0; j < 25; j++)
             {
-                xEnd = random.Next(x, 25);
-                yEnd = random.Next(y, 25);
+                xEnd = random.Next(3, 20);
+                yEnd = random.Next(3, 20);
 
                 for (int i = x; i < xEnd - 1; i++)
                 {
@@ -349,7 +349,7 @@ namespace prince_s_tomb
                     x = i;
                 }
 
-                for (int i = y; i <= yEnd -1; i++)
+                for (int i = y; i <= yEnd - 1; i++)
                 {
                     map[x, i] = -1;
                     y = i;
