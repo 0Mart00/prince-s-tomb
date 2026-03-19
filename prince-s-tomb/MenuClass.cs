@@ -29,14 +29,16 @@ public class MenuClass
                 if (menuOption)
                 {
 
-                    global::prince_s_tomb.Program.Mapgen();
-
+                    global::prince_s_tomb.Program.Start();
+                    Console.WriteLine("DEBUG: To load Menu");
                 }
                 else
                 {
+                    Console.WriteLine("DEBUG: Closed");
                     Environment.Exit(0);
                 }
             }
+
         }
 
     }
